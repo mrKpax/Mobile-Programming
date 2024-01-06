@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ededed"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/display_secondario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textSize="@dimen/text_size"
+                android:textAlignment="textEnd"/>
+
+            <TextView
+                android:id="@+id/display_operatore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#00ff00"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/display_principale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textSize="@dimen/text_size"
+                android:textAlignment="textEnd"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ededed">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Memory: "
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/display_memoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:textSize="@dimen/text_size"
+                android:onClick="cPressed"
+                android:backgroundTint="#ff0000"
+                android:layout_margin="2.5dp"
+                android:layout_gravity="fill"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MC"
+                android:textSize="@dimen/text_size"
+                android:onClick="mcPressed"
+                android:layout_margin="2.5dp"
+                android:layout_gravity="fill"
+                android:backgroundTint="#ededed"
+                android:textColor="@color/black"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MS"
+                android:textSize="@dimen/text_size"
+                android:onClick="msPressed"
+                android:layout_margin="2.5dp"
+                android:layout_gravity="fill"
+                android:backgroundTint="#ededed"
+                android:textColor="@color/black"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:layout_gravity="fill"
+                android:onClick="mrPressed"
+                android:text="MR"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#ededed"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="4"
+            android:rowCount="4">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="1"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="2"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="3"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:id="@+id/opPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="operatorPressed"
+                android:text="+"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#ff6f08"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="4"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="5"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="6"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:id="@+id/opMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="operatorPressed"
+                android:text="-"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#ff6f08"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="7"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="8"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="9"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:id="@+id/opStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="operatorPressed"
+                android:text="*"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#ff6f08"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="dotPressed"
+                android:text="."
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#ff6f08"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="digitPressed"
+                android:text="0"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#0011ff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="equalPressed"
+                android:text="="
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#ff6f08"/>
+
+            <Button
+                android:id="@+id/opDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:onClick="operatorPressed"
+                android:text="/"
+                android:textSize="@dimen/text_size"
+                android:backgroundTint="#ff6f08"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

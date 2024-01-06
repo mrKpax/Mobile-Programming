@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvNumeroQuesito"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="Quesito n."
+        android:textSize="@dimen/textsize_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvDomanda"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/lPulsanti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Domanda:"
+        android:textSize="@dimen/textsize_big"/>
+
+    <LinearLayout
+        android:id="@+id/lPulsanti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_big"
+            android:text="PREC"
+            android:onClick="precedenteClicked"
+            android:backgroundTint="#5e9cff"/>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_big"
+            android:text="VERO"
+            android:onClick="veroClicked"
+            android:backgroundTint="#2ad424"/>
+
+        <FrameLayout
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_big"
+            android:text="FALSO"
+            android:onClick="falsoClicked"
+            android:backgroundTint="#db1f1f"/>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_big"
+            android:text="SUCC"
+            android:onClick="successivoClicked"
+            android:backgroundTint="#5e9cff"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lPulsanti"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvRisposteCorretteValide"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risposte corrette valide: "
+            android:textSize="@dimen/textsize_big"/>
+
+        <TextView
+            android:id="@+id/tvRisposteCorretteNonValide"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risposte corrette non valide: "
+            android:textSize="@dimen/textsize_big"/>
+
+        <TextView
+            android:id="@+id/tvRisposteTotali"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risposte totali: "
+            android:textSize="@dimen/textsize_big"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/buttonSuggerimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_big"
+        android:onClick="resetClicked"
+        android:text="RESET"
+        android:backgroundTint="#7431cc"/>
+    
+    <Button
+        android:id="@+id/buttonSuggerimento"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_big"
+        android:onClick="suggerimentoClicked"
+        android:text="SUGGERIMENTO"
+        android:backgroundTint="#ffeb38"/>
+
+
+</RelativeLayout>

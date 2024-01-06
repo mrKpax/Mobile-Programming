@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvDomanda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/llPulsanti"
+        android:text="Vuoi visualizzare la risposta?"
+        android:textSize="@dimen/textsize_big"/>
+
+    <LinearLayout
+        android:id="@+id/llPulsanti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI"
+            android:textSize="@dimen/textsize_big"
+            android:onClick="siClicked"
+            android:backgroundTint="#2ad424"
+            />
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO"
+            android:textSize="@dimen/textsize_big"
+            android:onClick="noClicked"
+            android:backgroundTint="#db1f1f"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRisposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/llPulsanti"
+        android:text="....."
+        android:textSize="@dimen/textsize_big"/>
+
+</RelativeLayout>
